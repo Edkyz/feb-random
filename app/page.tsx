@@ -2,7 +2,7 @@
 
 import React from "react"
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback, type TouchEvent, type KeyboardEvent } from "react";
 
 // 🎯 CONFIGURE YOUR NAME HERE, LEGEND
 const YOUR_NAME = "Drei";
@@ -246,7 +246,7 @@ export default function ValentinePage() {
 
   // 👆 Handle No button touch (mobile)
   const handleNoTouch = useCallback(
-    (e: React.TouchEvent) => {
+    (e: TouchEvent<HTMLButtonElement>) => {
       if (!noButtonPatched) {
         e.preventDefault();
         moveNoButton();
@@ -257,7 +257,7 @@ export default function ValentinePage() {
 
   // ⌨️ Handle keyboard - No button escapes on Enter/Space too!
   const handleNoKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
+    (e: KeyboardEvent<HTMLButtonElement>) => {
       if (!noButtonPatched && (e.key === "Enter" || e.key === " ")) {
         e.preventDefault();
         moveNoButton();
