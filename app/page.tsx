@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react"
-
 import { useState, useRef, useEffect, useCallback, type TouchEvent, type KeyboardEvent } from "react";
 
 // 🎯 CONFIGURE YOUR NAME HERE, LEGEND
