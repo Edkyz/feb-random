@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback, type TouchEvent, type KeyboardEvent } from "react";
+import React from "react"
+
+import { useState, useRef, useEffect, useCallback } from "react";
 
 // 🎯 CONFIGURE YOUR NAME HERE, LEGEND
-const YOUR_NAME = "Drei";
+const YOUR_NAME = "Your Secret Admirer";
 
 // 💬 Toast messages for when they try to click No (nice try bestie)
 const TOAST_MESSAGES = [
@@ -244,7 +246,7 @@ export default function ValentinePage() {
 
   // 👆 Handle No button touch (mobile)
   const handleNoTouch = useCallback(
-    (e: TouchEvent<HTMLButtonElement>) => {
+    (e: React.TouchEvent) => {
       if (!noButtonPatched) {
         e.preventDefault();
         moveNoButton();
@@ -255,7 +257,7 @@ export default function ValentinePage() {
 
   // ⌨️ Handle keyboard - No button escapes on Enter/Space too!
   const handleNoKeyDown = useCallback(
-    (e: KeyboardEvent<HTMLButtonElement>) => {
+    (e: React.KeyboardEvent) => {
       if (!noButtonPatched && (e.key === "Enter" || e.key === " ")) {
         e.preventDefault();
         moveNoButton();
