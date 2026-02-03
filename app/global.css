@@ -127,7 +127,7 @@
 /* 💕 Valentine's Day Animations - Maximum Cheese Edition 💕 */
 
 @keyframes float-heart {
-  0%, 100% {
+  0% {
     transform: translateY(100vh) rotate(0deg);
     opacity: 0;
   }
