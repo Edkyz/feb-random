@@ -5,7 +5,7 @@ import React from "react"
 import { useState, useRef, useEffect, useCallback } from "react";
 
 // 🎯 CONFIGURE YOUR NAME HERE, LEGEND
-const YOUR_NAME = "Your Secret Admirer";
+const YOUR_NAME = "Drei";
 
 // 💬 Toast messages for when they try to click No (nice try bestie)
 const TOAST_MESSAGES = [
